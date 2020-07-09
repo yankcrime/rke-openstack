@@ -2,9 +2,13 @@
 
 This repo scratches my own itch when it comes to deploying Kubernetes using [RKE](https://rancher.com/products/rke/) on OpenStack.
 
+You'll need a fairly standard OpenStack deployment with LBaaS via Octavia.  The code in this repo assumes that it's a "public" OpenStack cloud with an EC2-esque network configuration in which instances are provisioned on a private network and are allocated floating IP addresses where necessary.
+
+Block storage via Cinder isn't currently supported.
+
 ## Pre-requisites
 
-Edit `terraform.tfvars` and specify the name of your SSH keypair and your OpenStack API password.  You can also incread the number of controller nodes and worker nodes if necessary.  Note that controller nodes have to be an odd number, as these run etcd and an odd number is required in order to establish cluster quorum.
+Edit `terraform.tfvars` and specify the name of your SSH keypair and your OpenStack API password.  You can also increase the number of controller nodes and worker nodes if necessary.  Note that controller nodes have to be an odd number, as these run etcd and an odd number is required in order to establish cluster quorum.
 
 Install the required Terraform providers as dependencies:
 

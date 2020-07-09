@@ -68,7 +68,8 @@ module "rke-workers" {
 }
 
 resource rke_cluster "rke-cluster" {
-  ssh_agent_auth = true
+  ssh_agent_auth     = true
+  kubernetes_version = var.kubernetes_version
 
   # Controllers
   dynamic nodes {

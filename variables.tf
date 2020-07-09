@@ -18,6 +18,11 @@ variable workers_flavor_name {
   default     = "bratwurst"
 }
 
+variable kubernetes_version {
+  description = "Version of Kubernetes to deploy"
+  default = "v1.18.3-rancher2-2"
+}
+
 variable image_name {
   description = "Name of image to be used"
   default     = "Ubuntu 18.04 (20942020)"

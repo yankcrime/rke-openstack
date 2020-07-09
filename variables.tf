@@ -13,9 +13,19 @@ variable controllers_flavor_name {
   default     = "hotdog"
 }
 
+variable controllers_tags {
+  description = "Role tags for control nodes"
+  default     = ["controlplane", "etcd"]
+}
+
 variable workers_flavor_name {
   description = "Flavor of instance to be used for worker nodes"
   default     = "bratwurst"
+}
+
+variable workers_tags {
+  description = "Role tags for control nodes"
+  default     = ["worker"]
 }
 
 variable kubernetes_version {

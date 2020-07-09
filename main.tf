@@ -47,7 +47,7 @@ module "rke-controllers" {
   network_id                  = module.rancher-network.network_id
   associate_public_ip_address = true
   floating_ip_pool            = var.floating_ip_pool
-  tags                        = ["controlplane", "etcd"]
+  tags                        = var.controllers_tags
 }
 
 module "rke-workers" {
@@ -64,7 +64,7 @@ module "rke-workers" {
   network_id                  = module.rancher-network.network_id
   associate_public_ip_address = true
   floating_ip_pool            = var.floating_ip_pool
-  tags                        = ["worker"]
+  tags                        = var.workers_tags
 }
 
 resource rke_cluster "rke-cluster" {

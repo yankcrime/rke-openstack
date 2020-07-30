@@ -1,7 +1,3 @@
-provider "openstack" {
-  use_octavia = true
-}
-
 data "openstack_identity_auth_scope_v3" "scope" {
   name = "auth_scope"
 }

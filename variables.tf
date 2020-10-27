@@ -30,12 +30,12 @@ variable workers_tags {
 
 variable kubernetes_version {
   description = "Version of Kubernetes to deploy"
-  default = "v1.18.3-rancher2-2"
+  default = "v1.19.2-rancher1-1"
 }
 
 variable image_name {
   description = "Name of image to be used"
-  default     = "Ubuntu 18.04 (20942020)"
+  default     = "Ubuntu 20.04 (20200714)"
 }
 
 variable external_network_id {
